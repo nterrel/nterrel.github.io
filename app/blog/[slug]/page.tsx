@@ -1,12 +1,20 @@
 import { getAllPostMeta, getPostBySlug } from "@/lib/posts";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import { notFound } from "next/navigation";
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return getAllPostMeta().map((p) => ({ slug: p.slug }));
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const { meta, content } = getPostBySlug(params.slug);
+export default async function BlogPostPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  if (!slug) notFound();
+
+  const { meta, content } = getPostBySlug(slug);
 
   return (
     <main className="wrap">
