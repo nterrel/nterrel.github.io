@@ -1,26 +1,264 @@
-@import "tailwindcss";
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #0b0d10;
+  --card: #121622;
+  --text: #e7ecf3;
+  --muted: #a8b3c7;
+  --link: #8ab4ff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul, ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
+}
+
+.wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 18px 0;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.project {
+  display: block;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 0.2s ease;
+}
+
+.project h3 {
+  margin-top: 0;
+  color: var(--link);
+}
+
+.project p {
+  color: var(--muted);
+  margin: 8px 0 0;
+}
+
+.project:hover {
+  border-color: rgba(138, 180, 255, 0.6);
+  background: rgba(138, 180, 255, 0.05);
+  text-decoration: none;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+  margin-bottom: 24px;
+}
+
+.tab {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  padding: 8px 16px;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  border-color: rgba(138, 180, 255, 0.5);
+  background: rgba(138, 180, 255, 0.05);
+}
+
+.tab[aria-selected="true"] {
+  border-color: rgba(138, 180, 255, 0.9);
+  background: rgba(138, 180, 255, 0.1);
+}
+
+.foot {
+  color: var(--muted);
+  padding-bottom: 40px;
+  padding-top: 40px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin-top: 40px;
+}
+
+/* Publications styling */
+.pubs {
+  list-style-position: outside;
+  padding-left: 1.5rem;
+}
+
+.pubs li {
+  margin-bottom: 1.5rem;
+}
+
+.pubs .title {
+  font-style: italic;
+}
+
+.pubs .status {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.pubs .venue,
+.pubs .year,
+.pubs .vol,
+.pubs .issue,
+.pubs .pages {
+  color: var(--muted);
+}
+
+.pubs .doi {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+}
+
+/* Presentations styling */
+.talks {
+  list-style: none;
+  padding-left: 0;
+}
+
+.talks li {
+  margin-bottom: 1.5rem;
+  padding-left: 0;
+}
+
+.talks .talk-title {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.talks .event {
+  color: var(--muted);
+}
+
+.talks .track {
+  color: var(--muted);
+}
+
+.talks .date {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Volunteering styling */
+.volunteering {
+  list-style: none;
+  padding-left: 0;
+}
+
+.volunteering li {
+  margin-bottom: 1.5rem;
+  padding-left: 0;
+}
+
+.volunteering .role {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.volunteering .desc {
+  color: var(--muted);
+  display: block;
+  line-height: 1.6;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .wrap {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
