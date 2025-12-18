@@ -8,28 +8,144 @@
       name="description"
       content="Nicholas Terrel — computational chemistry, ML interatomic potentials, HPC, and scientific software."
     />
+    <meta name="theme-color" content="#0b0d10" />
+
+    <!-- Open Graph meta tags for social sharing -->
+    <meta property="og:title" content="Nicholas Terrel, PhD" />
+    <meta
+      property="og:description"
+      content="Computational chemistry, ML interatomic potentials, HPC, and scientific software."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nterrel.github.io" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+
     <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Skip to content link for accessibility */
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: var(--link);
+        color: var(--bg);
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 0 0 4px 0;
+        z-index: 100;
+      }
+
+      .skip-link:focus {
+        top: 0;
+      }
+    </style>
   </head>
 
   <body>
-    <header class="wrap">
-      <h1>Nicholas Terrel, PhD</h1>
-      <p class="subtitle">
-        Computational Chemistry • Machine Learning Interatomic Potentials •
-        High-Performance Computing • Data Engineering
-      </p>
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-      <nav class="tabs" role="tablist" aria-label="Site sections">
-        <button class="tab" role="tab" data-tabs="about,contact">About & Contact</button>
-        <button class="tab" role="tab" data-tab="projects">Projects</button>
-        <button class="tab" role="tab" data-tab="research">Research</button>
-        <button class="tab" role="tab" data-tab="publications">Publications</button>
-        <button class="tab" role="tab" data-tab="presentations">Presentations</button>
-        <button class="tab" role="tab" data-tab="volunteering">Volunteering</button>
-      </nav>
+    <header class="wrap header">
+      <img
+        class="header-img"
+        src="assets/headshot.jpg"
+        alt="Professional headshot of Nicholas Terrel"
+        loading="lazy"
+      />
+
+      <div class="header-center">
+        <h1>Nicholas Terrel, PhD</h1>
+        <p class="subtitle">
+          Computational Chemistry • Machine Learning Interatomic Potentials •
+          High-Performance Computing • Data Engineering
+        </p>
+
+        <nav class="tabs" role="tablist" aria-label="Site sections">
+          <button class="tab" role="tab" data-tabs="about,contact">
+            About & Contact
+          </button>
+          <button class="tab" role="tab" data-tab="projects">Projects</button>
+          <button class="tab" role="tab" data-tab="research">Research</button>
+          <button class="tab" role="tab" data-tab="publications">Publications</button>
+          <button class="tab" role="tab" data-tab="presentations">Presentations</button>
+          <button class="tab" role="tab" data-tab="volunteering">Volunteering</button>
+        </nav>
+      </div>
+
+      <img
+        class="header-img"
+        src="assets/hammer-of-justice.png"
+        alt="Pixelated golden hammer, symbolizing the Hammer of Justice from Sly Cooper"
+        loading="lazy"
+      />
     </header>
 
-    <main class="wrap">
+    <main id="main-content" class="wrap">
+      <!-- About Section -->
+      <section id="about" class="card panel">
+        <h2>About Me</h2>
+        <div class="about">
+          <div class="about-text">
+            <p>
+              I am a computational chemist with a passion for developing tools to
+              accelerate scientific discovery. I specialize in machine learning
+              interatomic potentials (MLIPs) and their application to ultra-large-scale
+              molecular dynamics simulations of reactive chemical systems, earning me a
+              PhD in Chemistry from the University of Florida in 2025.
+            </p>
+            <p>
+              It's hard to pinpoint when I got my start, but if I had to pick an exact
+              moment, it would be when I was seven years old playing Sly Cooper on my
+              PlayStation 2. This semi-open-world game had me exploring the boundary
+              conditions of the game world and playing around with the physics the game
+              modeled. That simple life experience led me down a path of loving video
+              games and having a constant curiosity about the way physics are implemented
+              in those virtual worlds.
+            </p>
+            <p>
+              Fast forward several years to my college years, I found myself studying
+              chemistry and astronomy, where I learned that I could combine my love for
+              understanding the natural world with programming and how we can use
+              computational tools to solve massive challenges in the sciences. I joined
+              Dr. Bill Miller's research lab at Truman State University, where I proposed
+              my own project: Simulating selective water filtration using functionalized
+              carbon nanotubes. This project introduced me to molecular dynamics, system
+              design, and learning the ropes of high-performance computing and scripting.
+            </p>
+            <p>
+              This lead to my graduate studies at the University of Florida in the lab of
+              Dr. Adrian Roitberg, where I developed frameworks for training and deploying
+              machine learning interatomic potentials (MLIPs) to accelerate large-scale
+              molecular dynamics simulations of complex chemical systems. In my first
+              meeting with Dr. Roitberg, he showed me a simulation of carbon atoms
+              assembling into graphene sheets, and I was hooked.
+            </p>
+            <p>
+              Since then, I've worked on a variety of projects, from simulating prebiotic
+              chemistry to developing tools for uncertainty quantification in machine
+              learning potentials. My work has been published in peer-reviewed journals,
+              and I've been lucky to present my research at several conferences.
+            </p>
+            <p>
+              My biggest passion in life is learning; if you tell me something new and
+              intriguing, you can bet that I'll open up a new tab as a starting point to
+              research more deeply later. Outside of that, I enjoy hiking, comic books,
+              playing video games, and experimenting with new recipes in the kitchen
+              (especially ones that earn me compliments from my partner).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
       <section id="contact" class="card panel">
         <h2>My Contact Information</h2>
         <p>
@@ -47,24 +163,7 @@
         </p>
       </section>
 
-      <section id="about" class="card panel">
-        <h2>About Me</h2>
-        <div class="about">
-          <img
-            class="headshot"
-            src="assets/headshot.jpg"
-            alt="Headshot of Nicholas Terrel"
-          />
-          <p>
-            I am a computational scientist with a focus on developing tools to accelerate
-            molecular dynamics. I'm going to write more, but it's after 5 pm and tonight
-            is taco night...
-            <!--
-          Since I was a kid, I have been fascinated by the natural sciences, and how the
-          --></p>
-        </div>
-      </section>
-
+      <!-- Projects Section -->
       <section id="projects" class="card panel">
         <h2>Projects</h2>
         <div class="grid">
@@ -117,6 +216,7 @@
         </div>
       </section>
 
+      <!-- Research Section -->
       <section id="research" class="card panel">
         <h2>Research</h2>
         <ul>
@@ -126,7 +226,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <b>TorchANI</b> </a
+              <b>TorchANI</b></a
             >: Atomic behavior in MLIPs, uncertainty quantification, extending
             functionality and integration into popular MD suites (LAMMPS, OpenMM).
           </li>
@@ -136,8 +236,8 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <b>cuMolFind</b> </a
-            >: GPU-accelerated molecular dynamics analysis toolkit.
+              <b>cuMolFind</b></a
+            >: Graph-based, GPU-accelerated molecular dynamics analysis toolkit.
           </li>
           <li>
             <a
@@ -145,7 +245,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <b>LUKE: Use the Forces</b> </a
+              <b>LUKE: Use the Forces</b></a
             >: Uncertainty-based toolkit for sampling molecular substructures.
           </li>
           <li>
@@ -160,12 +260,13 @@
         </ul>
       </section>
 
+      <!-- Publications Section -->
       <section id="publications" class="card panel">
         <h2>Publications</h2>
         <ol class="pubs">
           <li>
-            <b><u>Nicholas S. Terrel</u></b>, Jinze Xue, Ignacio J. Pickering, Melisa Alkan, Adrian E.
-            Roitberg.
+            <b><u>Nicholas S. Terrel</u></b
+            >, Jinze Xue, Ignacio J. Pickering, Melisa Alkan, Adrian E. Roitberg.
             <span class="title"
               >Exploring Prebiotic Chemistry with ANI Neural Network Potential.</span
             >
@@ -173,7 +274,8 @@
           </li>
 
           <li>
-            Jinze Xue, <b><u>Nicholas S. Terrel</u></b>, Ignacio J. Pickering, Adrian E. Roitberg.
+            Jinze Xue, <b><u>Nicholas S. Terrel</u></b
+            >, Ignacio J. Pickering, Adrian E. Roitberg.
             <span class="title"
               >LAMMPS-ANI: Large Scale Molecular Dynamics Simulations with ANI Neural
               Network Potential.</span
@@ -182,8 +284,9 @@
           </li>
 
           <li>
-            Ignacio J. Pickering, Jinze Xue, Kate Huddleston, <b><u></u>Nicholas S. Terrel</u></b>, Adrian
-            E. Roitberg.
+            Ignacio J. Pickering, Jinze Xue, Kate Huddleston,
+            <b><u>Nicholas S. Terrel</u></b
+            >, Adrian E. Roitberg.
             <span class="title"
               >TorchANI 2.0: An Extensible, High-Performance Library for Neural Network
               Potential Design.</span
@@ -205,7 +308,8 @@
 
           <li>
             Mikayla Y. Darrows, Dimuthu Kodituwakku, Jinze Xue, Ignacio J. Pickering,
-            <b><u>Nicholas S. Terrel</u></b>, Adrian E. Roitberg.
+            <b><u>Nicholas S. Terrel</u></b
+            >, Adrian E. Roitberg.
             <span class="title"
               >LEGOLAS: a Machine Learning Method for Rapid and Accurate Predictions of
               Protein NMR Chemical Shifts.</span
@@ -227,84 +331,107 @@
         </ol>
       </section>
 
+      <!-- Presentations Section -->
       <section id="presentations" class="card panel">
         <h2>Conference Presentations</h2>
+
         <ul class="talks">
           <li>
-            <span class="talk-title"
-              ><b
-                >LAMMPS-ANI Hero Run: Simulating Early Earth Chemistry at an Unprecedented
-                Scale</b
-              ></span
-            ><br />
-            <span class="event"><i>University of Florida 64th Sanibel Symposium</i></span>
-            — <span class="track">Machine Learning Track</span><br />
-            <span class="date">02/2025</span>
+            <div class="talk-title">
+              LAMMPS-ANI Hero Run: Simulating Early Earth Chemistry at an Unprecedented
+              Scale
+            </div>
+            <div class="talk-meta">
+              <span class="event"
+                ><i>University of Florida 64th Sanibel Symposium</i></span
+              >
+              — <span class="track">Machine Learning Track</span>
+              <span class="talk-date">Feb 2025</span>
+            </div>
           </li>
+
           <li>
-            <span class="talk-title"
-              ><b
-                >Modeling of Early Earth Chemistry: 22.8 Million Atoms Simulated with
-                TorchANI</b
-              ></span
-            ><br />
-            <span class="event"><i>University of Florida AI Days Symposium</i></span> —
-            <span class="track">Machine Learning in the Natural Sciences</span><br />
-            <span class="date">10/2024</span>
+            <div class="talk-title">
+              Modeling of Early Earth Chemistry: 22.8 Million Atoms Simulated with
+              TorchANI
+            </div>
+            <div class="talk-meta">
+              <span class="event"><i>University of Florida AI Days Symposium</i></span>
+              — <span class="track">Machine Learning in the Natural Sciences</span>
+              <span class="talk-date">Oct 2024</span>
+            </div>
           </li>
+
           <li>
-            <span class="talk-title"
-              >Atomistic Uncertainty Driven Data Generation in ANI Neural Network
-              Potentials</span
-            ><br />
-            <span class="event"><i>23rd Annual SciPy Conference</i></span> —
-            <span class="track">Materials and Chemistry Track</span><br />
-            <span class="date">07/2024</span>
+            <div class="talk-title">
+              <a
+                href="https://www.youtube.com/watch?v=nEMX1Bwpjyo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Atomistic Uncertainty Driven Data Generation in ANI Neural Network
+                Potentials
+              </a>
+            </div>
+            <div class="talk-meta">
+              <span class="event"><i>23rd Annual SciPy Conference</i></span>
+              — <span class="track">Materials and Chemistry Track</span>
+              <span class="talk-date">Jul 2024</span>
+            </div>
           </li>
+
           <li>
-            <span class="talk-title"
-              >Uncertainty-Driven Data Generation in ANI Neural Network Potentials: An
-              Atomistic Force-Based Approach</span
-            ><br />
-            <span class="event"
-              ><i>American Chemical Society: Many Flavors of Chemistry</i></span
-            >
-            — <span class="track">Division of Computers in Chemistry</span><br />
-            <span class="date">03/2024</span>
+            <div class="talk-title">
+              Uncertainty-Driven Data Generation in ANI Neural Network Potentials: An
+              Atomistic Force-Based Approach
+            </div>
+            <div class="talk-meta">
+              <span class="event"
+                ><i>American Chemical Society: Many Flavors of Chemistry</i></span
+              >
+              — <span class="track">Division of Computers in Chemistry</span>
+              <span class="talk-date">Mar 2024</span>
+            </div>
           </li>
+
           <li>
-            <span class="talk-title"
-              >Atomistic Uncertainty Estimation in ANAKIN-ME Neural Network
-              Potentials</span
-            ><br />
-            <span class="event"
-              ><i>American Chemical Society: Harnessing the Power of Data</i></span
-            >
-            — <span class="track">Division of Computers in Chemistry</span><br />
-            <span class="date">08/2023</span>
+            <div class="talk-title">
+              Atomistic Uncertainty Estimation in ANAKIN-ME Neural Network Potentials
+            </div>
+            <div class="talk-meta">
+              <span class="event"
+                ><i>American Chemical Society: Harnessing the Power of Data</i></span
+              >
+              — <span class="track">Division of Computers in Chemistry</span>
+              <span class="talk-date">Aug 2023</span>
+            </div>
           </li>
+
           <li>
-            <span class="talk-title"
-              >Atomistic Uncertainty Estimation in ANAKIN-ME Neural Network
-              Potentials</span
-            ><br />
-            <span class="event"
-              ><i>American Chemical Society Florida Section (FAME)</i></span
-            ><br />
-            <span class="date">06/2023</span>
+            <div class="talk-title">
+              Atomistic Uncertainty Estimation in ANAKIN-ME Neural Network Potentials
+            </div>
+            <div class="talk-meta">
+              <span class="event"
+                ><i>American Chemical Society Florida Section (FAME)</i></span
+              >
+              <span class="talk-date">Jun 2023</span>
+            </div>
           </li>
         </ul>
       </section>
 
+      <!-- Volunteering Section -->
       <section id="volunteering" class="card panel">
         <h2>Volunteering</h2>
         <ul class="volunteering">
           <li>
-            <span class="role"><b>Open-source contributor (for funsies)</b></span
+            <span class="role"
+              ><b>Open-source contributor (Python libraries for ML in STEM)</b></span
             ><br />
             <span class="desc"
-              >Contribute code, reviews, and user support for scientific Python tooling
-              and ML-for-chemistry projects (bug fixes, performance improvements,
+              >Contributions, PRs and code reviews, and user support for scientific Python
+              tooling and ML-for-chemistry projects (bug fixes, performance improvements,
               documentation, and reproducible examples).</span
             >
           </li>
@@ -312,20 +439,28 @@
             <span class="role"><b>Recruitment Ambassador</b></span
             ><br />
             <span class="desc"
-              >Volunteered as a recruitment ambassador for the University of Florida,
+              >Served as a recruitment ambassador for the University of Florida,
               Department of Chemistry to help prospective graduate students learn about
               research opportunities and see the benefits of joining the UF Chemistry
-              community.</span
-            >
+              community. <br /><br />
+              I also served as a recruitment ambassador at Truman State University,
+              sending admissions acceptance packages, conducting campus tours, and hosting
+              prospective students during open house events.
+            </span>
           </li>
           <li>
             <span class="role"><b>Mentorship &amp; peer support</b></span
             ><br />
             <span class="desc"
-              >Mentor students and early-career researchers on Python workflows for
-              computational chemistry and HPC, including debugging, environment setup, and
-              best practices for reproducible research.</span
-            >
+              >I have a passion for mentoring and supporting early-career researchers. I
+              have provided guidance on Python workflows for computational chemistry and
+              HPC, including debugging, environment setup, and best practices for
+              reproducible research. <br /><br />
+              There is something about making complex topics "click" for someone that is
+              less-than-technical that I find deeply rewarding. Perhaps it is due to my
+              own experiences as a self-taught programmer coming from a non-traditional
+              background.
+            </span>
           </li>
         </ul>
       </section>
@@ -335,49 +470,7 @@
       <small>© <span id="y"></span> Nick Terrel</small>
     </footer>
 
-    <script>
-      document.getElementById("y").textContent = new Date().getFullYear();
-
-      const tabs = [...document.querySelectorAll(".tab")];
-      const panels = [...document.querySelectorAll(".panel")];
-
-      function show(ids, pushHash = true) {
-        const want = new Set(Array.isArray(ids) ? ids : [ids]);
-
-        panels.forEach((p) => (p.hidden = !want.has(p.id)));
-
-        tabs.forEach((t) => {
-          const tabIds = (t.dataset.tabs ?? t.dataset.tab ?? "")
-            .split(",")
-            .map((s) => s.trim())
-            .filter(Boolean);
-
-          const selected = tabIds.length && tabIds.every((id) => want.has(id));
-          t.setAttribute("aria-selected", selected ? "true" : "false");
-          t.setAttribute("tabindex", selected ? "0" : "-1");
-        });
-
-        if (pushHash) {
-          // use the first id as the hash
-          const first = [...want][0];
-          history.replaceState(null, "", "#" + first);
-        }
-      }
-
-      tabs.forEach((t) =>
-        t.addEventListener("click", () => {
-          const ids = (t.dataset.tabs ?? t.dataset.tab ?? "")
-            .split(",")
-            .map((s) => s.trim())
-            .filter(Boolean);
-          show(ids);
-        })
-      );
-
-      // On load: if hash is #contact, treat it as the combined view
-      const initial = (location.hash || "#about").slice(1);
-      if (initial === "about" || initial === "contact") show(["about", "contact"], false);
-      else show(document.getElementById(initial) ? initial : "about", false);
-    </script>
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
   </body>
 </html>

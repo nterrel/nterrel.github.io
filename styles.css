@@ -1,3 +1,4 @@
+/* ==================== Variables ==================== */
 :root {
   --bg: #0b0d10;
   --card: #121622;
@@ -5,63 +6,91 @@
   --muted: #a8b3c7;
   --link: #8ab4ff;
 }
+
+/* ==================== Base Styles ==================== */
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
+  line-height: 1.6;
 }
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ==================== Layout ==================== */
 .wrap {
   max-width: 920px;
   margin: 0 auto;
   padding: 24px;
-}
-.subtitle {
-  color: var(--muted);
-  margin-top: 6px;
 }
 
 .card {
   background: var(--card);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 16px;
-  padding: 18px 18px;
+  padding: 18px;
   margin: 18px 0;
 }
+
 .grid {
   display: grid;
   gap: 14px;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
-.project {
-  display: block;
-  padding: 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  text-decoration: none;
-  color: var(--text);
-}
-.project p {
-  color: var(--muted);
-  margin: 8px 0 0;
-}
-.project:hover {
-  border-color: rgba(138, 180, 255, 0.6);
-}
-.foot {
-  color: var(--muted);
-  padding-bottom: 40px;
+
+.panel[hidden] {
+  display: none;
 }
 
+/* ==================== Header ==================== */
+.header {
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  gap: 16px;
+  align-items: center;
+}
+
+.header-center h1 {
+  margin: 0;
+}
+
+.header-center .subtitle {
+  margin-top: 6px;
+}
+
+.header-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ==================== Tabs Navigation ==================== */
 .tabs {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 14px;
 }
+
 .tab {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -69,19 +98,56 @@ body {
   padding: 8px 12px;
   color: inherit;
   cursor: pointer;
-}
-.tab[aria-selected="true"] {
-  border-color: rgba(138, 180, 255, 0.9);
-}
-.panel[hidden] {
-  display: none;
+  transition: border-color 0.2s ease;
 }
 
-a {
-  color: var(--link);
+.tab:hover {
+  border-color: rgba(138, 180, 255, 0.5);
 }
-a:hover {
-  text-decoration: underline;
+
+.tab[aria-selected="true"] {
+  border-color: rgba(138, 180, 255, 0.9);
+  background: rgba(138, 180, 255, 0.1);
+}
+
+/* ==================== Projects Section ==================== */
+.project {
+  display: block;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.project:hover {
+  border-color: rgba(138, 180, 255, 0.6);
+  background: rgba(138, 180, 255, 0.05);
+}
+
+.project p {
+  color: var(--muted);
+  margin: 8px 0 0;
+}
+
+/* ==================== About Section ==================== */
+.about {
+  display: block;
+}
+
+#about p {
+  text-align: justify;
+}
+
+/* ==================== Contact Section ==================== */
+#contact p {
+  text-align: center;
+}
+
+/* ==================== Publications Section ==================== */
+.pubs .title {
+  font-weight: 600;
 }
 
 ul li + li,
@@ -89,31 +155,65 @@ ol li + li {
   margin-top: 10px;
 }
 
-/* Bold titles in pubs + talks */
-.pubs .title,
-.talks .talk-title {
+/* ==================== Presentations Section ==================== */
+.talk-title {
   font-weight: 600;
 }
 
-.about {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 16px;
-  align-items: start;
+.talk-title a {
+  color: var(--link);
+  text-decoration: underline;
+  font-weight: inherit;
 }
 
-.headshot {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.talk-title a:hover {
+  text-decoration: underline;
+}
+
+.talk-meta {
+  margin-top: 4px;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: baseline;
+}
+
+.talk-date {
+  margin-left: auto;
+  padding: 2px 8px;
+  font-size: 0.85em;
+  color: var(--muted);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* ==================== Footer ==================== */
+.foot {
+  color: var(--muted);
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 720px) {
+  .header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .header-center {
+    width: 100%;
+  }
+
+  .tabs {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 560px) {
-  .about {
-    grid-template-columns: 1fr;
-  }
   .headshot {
     width: 160px;
     height: 160px;
