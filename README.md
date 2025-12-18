@@ -1,4 +1,4 @@
-# nterrel.github.io
+# [nterrel.github.io](https://nterrel.github.io)
 
 I wanted to build a website, so I did.
 
