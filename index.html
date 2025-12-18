@@ -4,26 +4,27 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nicholas Terrel, PhD</title>
+  <meta name="description" content="Nicholas Terrel — computational chemistry, ML interatomic potentials, HPC, and scientific software." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="wrap">
     <h1>Nicholas Terrel, PhD</h1>
     <p class="subtitle">Computational Chemistry • Machine Learning Interatomic Potentials • High-Performance Computing • Data Engineering</p>
-    <nav class="nav">
-      <a href="#contact">Contact</a>
-      <a href="#about">About me</a>
-      <a href="#projects">Projects</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#presentations">Presentations</a>
-      <a href="#volunteering">Volunteering</a>
+    <nav class="tabs" role="tablist" aria-label="Site sections">
+      <button class="tab" role="tab" data-tab="contact">Contact</button>
+      <button class="tab" role="tab" data-tab="about">About</button>
+      <button class="tab" role="tab" data-tab="projects">Projects</button>
+      <button class="tab" role="tab" data-tab="research">Research</button>
+      <button class="tab" role="tab" data-tab="publications">Publications</button>
+      <button class="tab" role="tab" data-tab="presentations">Presentations</button>
+      <button class="tab" role="tab" data-tab="volunteering">Volunteering</button>
     </nav>
   </header>
 
   <main class="wrap">
 
-    <section id="contact" class="card">
+    <section id="contact" class="card panel">
       <h2>Contact</h2>
       <p>
         <a href="mailto:nickterrel4@gmail.com">nickterrel4@gmail.com</a> •
@@ -32,7 +33,7 @@
       </p>
     </section>
 
-    <section id="about" class="card">
+    <section id="about" class="card panel">
       <h2>About</h2>
       <p>
         I am a computational scientist with a focus on developing tools to accelerate molecular dynamics. 
@@ -43,7 +44,7 @@
       </p>
     </section>
 
-    <section id="research" class="card">
+    <section id="research" class="card panel">
       <h2>Research</h2>
       <ul>
         <li><b>TorchANI:</b> Atomic behavior in MLIPs, uncertainty quantification, extending functionality and integration into popular MD suites (LAMMPS, OpenMM).</li>
@@ -52,15 +53,13 @@
       </ul>
     </section>
 
-    <section id="projects" class="card">
+    <section id="projects" class="card panel">
       <h2>Projects</h2>
       <div class="grid">
         <a class="project" href="https://github.com/nterrel/llmini">
           <h3>LLMini</h3>
-          <p>
-            Miniturized GPT-style language model based on TinyShakespeare and WikiText datasets used as a tool to have a better backend understanding of transformer-based models.
-            The ultimate goal here is to build up to larger models, implement some fundamentals of LangChain, and experiment with fine-tuning and prompt engineering.
-            Eventually, I would like to use this framework to train my own model on chemical identifiers (SMILES, InChI, SELFIES) and predict associated properties from molecules synthesized in reactive MD environments, like the Early Earth Hero Run.
+        <p>
+          Mini GPT-style model for learning transformer internals + a path toward chemistry token models (SMILES/SELFIES).
         </p>
         </a>
         <a class="project" href="https://github.com/nterrel/ani-mm">
@@ -70,7 +69,7 @@
       </div>
     </section>
 
-    <section id="publications">
+    <section id="publications" class="card panel">
     <h2>Publications</h2>
 
     <ol class="pubs">
@@ -102,7 +101,7 @@
     </ol>
     </section>
 
-    <section id="presentations">
+    <section id="presentations" class="card panel">
     <h2>Conference Presentations</h2>
 
     <ul class="talks">
@@ -144,9 +143,8 @@
     </ul>
     </section>
 
-    <section id="volunteering">
+  <section id="volunteering" class="card panel">
     <h2>Volunteering</h2>
-
     <ul class="volunteering">
         <li>
         <span class="role"><b>Open-source contributor (for funsies)</b></span><br />
@@ -189,3 +187,24 @@
   <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
+<script>
+  const tabs = [...document.querySelectorAll(".tab")];
+  const panels = [...document.querySelectorAll(".panel")];
+
+  function show(id, pushHash=true) {
+    panels.forEach(p => p.hidden = (p.id !== id));
+    tabs.forEach(t => {
+      const selected = t.dataset.tab === id;
+      t.setAttribute("aria-selected", selected ? "true" : "false");
+      t.setAttribute("tabindex", selected ? "0" : "-1");
+    });
+    if (pushHash) history.replaceState(null, "", "#" + id);
+  }
+
+  tabs.forEach(t => t.addEventListener("click", () => show(t.dataset.tab)));
+
+  // On load: use URL hash if present, else default
+  const initial = (location.hash || "#about").slice(1);
+  show(document.getElementById(initial) ? initial : "about", false);
+</script>

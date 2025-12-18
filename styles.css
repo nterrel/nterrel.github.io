@@ -3,8 +3,6 @@
 body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; background:var(--bg); color:var(--text); }
 .wrap { max-width: 920px; margin: 0 auto; padding: 24px; }
 .subtitle { color: var(--muted); margin-top: 6px; }
-.nav a { margin-right: 14px; color: var(--link); text-decoration: none; }
-.nav a:hover { text-decoration: underline; }
 
 .card { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 18px 18px; margin: 18px 0; }
 .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
@@ -12,3 +10,18 @@ body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
 .project p { color: var(--muted); margin: 8px 0 0; }
 .project:hover { border-color: rgba(138,180,255,0.6); }
 .foot { color: var(--muted); padding-bottom: 40px; }
+
+.tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.tab {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: inherit;
+  cursor: pointer;
+}
+.tab[aria-selected="true"] { border-color: rgba(138,180,255,0.9); }
+.panel[hidden] { display: none; }
+
+a { color: var(--link); }
+a:hover { text-decoration: underline; }
