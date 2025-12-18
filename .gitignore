@@ -1,1 +1,13 @@
+# Editor/IDE
+.vscode/
+.idea/
 
+# Logs
+*.log
+
+# Env files
+.env
+.env.*
+
+# macOS
+.DS_Store

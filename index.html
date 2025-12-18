@@ -7,13 +7,14 @@
   <meta name="description" content="Nicholas Terrel — computational chemistry, ML interatomic potentials, HPC, and scientific software." />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <header class="wrap">
     <h1>Nicholas Terrel, PhD</h1>
     <p class="subtitle">Computational Chemistry • Machine Learning Interatomic Potentials • High-Performance Computing • Data Engineering</p>
+
     <nav class="tabs" role="tablist" aria-label="Site sections">
-      <button class="tab" role="tab" data-tab="contact">Contact</button>
-      <button class="tab" role="tab" data-tab="about">About</button>
+      <button class="tab" role="tab" data-tabs="about,contact">About Me + Contact Info</button>
       <button class="tab" role="tab" data-tab="projects">Projects</button>
       <button class="tab" role="tab" data-tab="research">Research</button>
       <button class="tab" role="tab" data-tab="publications">Publications</button>
@@ -23,25 +24,43 @@
   </header>
 
   <main class="wrap">
-
     <section id="contact" class="card panel">
       <h2>Contact</h2>
       <p>
         <a href="mailto:nickterrel4@gmail.com">nickterrel4@gmail.com</a> •
-        <a href="https://github.com/nterrel">GitHub</a> •
-        <a href="https://linkedin.com/in/nick-terrel-a55b34194">LinkedIn</a>
+        <a href="https://github.com/nterrel" target="_blank" rel="noopener noreferrer">GitHub</a> •
+        <a href="https://linkedin.com/in/nick-terrel-a55b34194" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </p>
     </section>
 
     <section id="about" class="card panel">
       <h2>About</h2>
-      <p>
-        I am a computational scientist with a focus on developing tools to accelerate molecular dynamics. 
-        I'm going to write more, but it's after 5 pm and tonight is taco night...
-        <!--
-        Since I was a kid, I have been fascinated by the natural sciences, and how the
-        -->
-      </p>
+      <div class="about">
+        <img class="headshot" src="assets/headshot.jpg" alt="Headshot of Nicholas Terrel" />
+        <p>
+          I am a computational scientist with a focus on developing tools to accelerate molecular dynamics.
+          I'm going to write more, but it's after 5 pm and tonight is taco night...
+          <!--
+          Since I was a kid, I have been fascinated by the natural sciences, and how the
+          -->
+        </p>
+      </div>
+
+    </section>
+
+    <section id="projects" class="card panel">
+      <h2>Projects</h2>
+      <div class="grid">
+        <a class="project" href="https://github.com/nterrel/llmini" target="_blank" rel="noopener noreferrer">
+          <h3>LLMini</h3>
+          <p>Mini GPT-style model for learning transformer internals + a path toward chemistry token models (SMILES/SELFIES).</p>
+        </a>
+
+        <a class="project" href="https://github.com/nterrel/ani-mm" target="_blank" rel="noopener noreferrer">
+          <h3>ani-mm</h3>
+          <p>Implementation of TorchANI MLIPs into OpenMM for running molecular dynamics with a live-viewer of the simulation.</p>
+        </a>
+      </div>
     </section>
 
     <section id="research" class="card panel">
@@ -53,158 +72,139 @@
       </ul>
     </section>
 
-    <section id="projects" class="card panel">
-      <h2>Projects</h2>
-      <div class="grid">
-        <a class="project" href="https://github.com/nterrel/llmini">
-          <h3>LLMini</h3>
-        <p>
-          Mini GPT-style model for learning transformer internals + a path toward chemistry token models (SMILES/SELFIES).
-        </p>
-        </a>
-        <a class="project" href="https://github.com/nterrel/ani-mm">
-          <h3>ani-mm</h3>
-          <p>Implementation of TorchANI MLIPs into OpenMM for running molecular dynamics with a live-viewer of the simulation.</p>
-        </a>
-      </div>
-    </section>
-
     <section id="publications" class="card panel">
-    <h2>Publications</h2>
-
-    <ol class="pubs">
+      <h2>Publications</h2>
+      <ol class="pubs">
         <li>
-        Nicholas S. Terrel, Jinze Xue, Ignacio J. Pickering, Melisa Alkan, Adrian E. Roitberg.
-        <span class="title">Exploring Prebiotic Chemistry with ANI Neural Network Potential.</span>
-        <span class="status">Manuscript in progress.</span>
+          Nicholas S. Terrel, Jinze Xue, Ignacio J. Pickering, Melisa Alkan, Adrian E. Roitberg.
+          <span class="title">Exploring Prebiotic Chemistry with ANI Neural Network Potential.</span>
+          <span class="status">Manuscript in progress.</span>
         </li>
 
         <li>
-        Jinze Xue, Nicholas S. Terrel, Ignacio J. Pickering, Adrian E. Roitberg.
-        <span class="title">LAMMPS-ANI: Large Scale Molecular Dynamics Simulations with ANI Neural Network Potential.</span>
-        <span class="status">To be submitted December 2025.</span>
+          Jinze Xue, Nicholas S. Terrel, Ignacio J. Pickering, Adrian E. Roitberg.
+          <span class="title">LAMMPS-ANI: Large Scale Molecular Dynamics Simulations with ANI Neural Network Potential.</span>
+          <span class="status">To be submitted December 2025.</span>
         </li>
 
         <li>
-        Ignacio J. Pickering, Jinze Xue, Kate Huddleston, Nicholas S. Terrel, Adrian E. Roitberg.
-        <span class="title">TorchANI 2.0: An Extensible, High-Performance Library for Neural Network Potential Design.</span>
-        <span class="venue">J. Chem. Inf. Model.</span> <span class="year">2025</span>.
-        <span class="doi">DOI: <a href="https://doi.org/10.1021/acs.jcim.5c01853">10.1021/acs.jcim.5c01853</a></span>
+          Ignacio J. Pickering, Jinze Xue, Kate Huddleston, Nicholas S. Terrel, Adrian E. Roitberg.
+          <span class="title">TorchANI 2.0: An Extensible, High-Performance Library for Neural Network Potential Design.</span>
+          <span class="venue">J. Chem. Inf. Model.</span> <span class="year">2025</span>.
+          <span class="doi">DOI: <a href="https://doi.org/10.1021/acs.jcim.5c01853" target="_blank" rel="noopener noreferrer">10.1021/acs.jcim.5c01853</a></span>
         </li>
 
         <li>
-        Mikayla Y. Darrows, Dimuthu Kodituwakku, Jinze Xue, Ignacio J. Pickering, Nicholas S. Terrel, Adrian E. Roitberg.
-        <span class="title">LEGOLAS: a Machine Learning Method for Rapid and Accurate Predictions of Protein NMR Chemical Shifts.</span>
-        <span class="venue">J. Chem. Theory Comput.</span> <span class="year">2025</span>, <span class="vol">21</span> (<span class="issue">8</span>) <span class="pages">4266–4275</span>.
-        <span class="doi">DOI: <a href="https://doi.org/10.1021/acs.jctc.5c00026">10.1021/acs.jctc.5c00026</a></span>
+          Mikayla Y. Darrows, Dimuthu Kodituwakku, Jinze Xue, Ignacio J. Pickering, Nicholas S. Terrel, Adrian E. Roitberg.
+          <span class="title">LEGOLAS: a Machine Learning Method for Rapid and Accurate Predictions of Protein NMR Chemical Shifts.</span>
+          <span class="venue">J. Chem. Theory Comput.</span> <span class="year">2025</span>, <span class="vol">21</span> (<span class="issue">8</span>) <span class="pages">4266–4275</span>.
+          <span class="doi">DOI: <a href="https://doi.org/10.1021/acs.jctc.5c00026" target="_blank" rel="noopener noreferrer">10.1021/acs.jctc.5c00026</a></span>
         </li>
-    </ol>
+      </ol>
     </section>
 
     <section id="presentations" class="card panel">
-    <h2>Conference Presentations</h2>
-
-    <ul class="talks">
+      <h2>Conference Presentations</h2>
+      <ul class="talks">
         <li>
-        <span class="talk-title"><b>LAMMPS-ANI Hero Run: Simulating Early Earth Chemistry at an Unprecedented Scale</b></span><br />
-        <span class="event"><i>University of Florida 64th Sanibel Symposium</i></span> — <span class="track">Machine Learning Track</span><br />
-        <span class="date">02/2025</span>
+          <span class="talk-title"><b>LAMMPS-ANI Hero Run: Simulating Early Earth Chemistry at an Unprecedented Scale</b></span><br />
+          <span class="event"><i>University of Florida 64th Sanibel Symposium</i></span> — <span class="track">Machine Learning Track</span><br />
+          <span class="date">02/2025</span>
         </li>
-
         <li>
-        <span class="talk-title"><b>Modeling of Early Earth Chemistry: 22.8 Million Atoms Simulated with TorchANI</b></span><br />
-        <span class="event"><i>University of Florida AI Days Symposium</i></span> — <span class="track">Machine Learning in the Natural Sciences</span><br />
-        <span class="date">10/2024</span>
+          <span class="talk-title"><b>Modeling of Early Earth Chemistry: 22.8 Million Atoms Simulated with TorchANI</b></span><br />
+          <span class="event"><i>University of Florida AI Days Symposium</i></span> — <span class="track">Machine Learning in the Natural Sciences</span><br />
+          <span class="date">10/2024</span>
         </li>
-
         <li>
-        <span class="talk-title"><b>Atomistic Uncertainty Driven Data Generation in ANI Neural Network Potentials</b></span><br />
-        <span class="event"><i>23rd Annual SciPy Conference</i></span> — <span class="track">Materials and Chemistry Track</span><br />
-        <span class="date">07/2024</span>
+          <span class="talk-title">Atomistic Uncertainty Driven Data Generation in ANI Neural Network Potentials</span><br />
+          <span class="event"><i>23rd Annual SciPy Conference</i></span> — <span class="track">Materials and Chemistry Track</span><br />
+          <span class="date">07/2024</span>
         </li>
-
         <li>
-        <span class="talk-title"><b>Uncertainty-Driven Data Generation in ANI Neural Network Potentials: An Atomistic Force-Based Approach</b></span><br />
-        <span class="event"><i>American Chemical Society: Many Flavors of Chemistry</i></span> — <span class="track">Division of Computers in Chemistry</span><br />
-        <span class="date">03/2024</span>
+          <span class="talk-title">Uncertainty-Driven Data Generation in ANI Neural Network Potentials: An Atomistic Force-Based Approach</span><br />
+          <span class="event"><i>American Chemical Society: Many Flavors of Chemistry</i></span> — <span class="track">Division of Computers in Chemistry</span><br />
+          <span class="date">03/2024</span>
         </li>
-
         <li>
-        <span class="talk-title"><b>Atomistic Uncertainty Estimation in ANAKIN-ME Neural Network Potentials</b></span><br />
-        <span class="event"><i>American Chemical Society: Harnessing the Power of Data</i></span> — <span class="track">Division of Computers in Chemistry</span><br />
-        <span class="date">08/2023</span>
+          <span class="talk-title">Atomistic Uncertainty Estimation in ANAKIN-ME Neural Network Potentials</span><br />
+          <span class="event"><i>American Chemical Society: Harnessing the Power of Data</i></span> — <span class="track">Division of Computers in Chemistry</span><br />
+          <span class="date">08/2023</span>
         </li>
-
         <li>
-        <span class="talk-title"><b>Atomistic Uncertainty Estimation in ANAKIN-ME Neural Network Potentials</b></span><br />
-        <span class="event"><i>American Chemical Society Florida Section (FAME)</i></span><br />
-        <span class="date">06/2023</span>
+          <span class="talk-title">Atomistic Uncertainty Estimation in ANAKIN-ME Neural Network Potentials</span><br />
+          <span class="event"><i>American Chemical Society Florida Section (FAME)</i></span><br />
+          <span class="date">06/2023</span>
         </li>
-    </ul>
+      </ul>
     </section>
 
-  <section id="volunteering" class="card panel">
-    <h2>Volunteering</h2>
-    <ul class="volunteering">
+    <section id="volunteering" class="card panel">
+      <h2>Volunteering</h2>
+      <ul class="volunteering">
         <li>
-        <span class="role"><b>Open-source contributor (for funsies)</b></span><br />
-        <span class="desc">
-            Contribute code, reviews, and user support for scientific Python tooling and ML-for-chemistry projects
-            (bug fixes, performance improvements, documentation, and reproducible examples).
-        </span>
+          <span class="role"><b>Open-source contributor (for funsies)</b></span><br />
+          <span class="desc">Contribute code, reviews, and user support for scientific Python tooling and ML-for-chemistry projects (bug fixes, performance improvements, documentation, and reproducible examples).</span>
         </li>
-
         <li>
-        <span class="role"><b>Recruitment Ambassador</b></span><br />
-        <span class="desc">
-            Volunteered as a recruitment ambassador for the University of Florida, Department of Chemistry to help prospective graduate students learn about research opportunities and see the benefits of joining the UF Chemistry community.
-        </span>
+          <span class="role"><b>Recruitment Ambassador</b></span><br />
+          <span class="desc">Volunteered as a recruitment ambassador for the University of Florida, Department of Chemistry to help prospective graduate students learn about research opportunities and see the benefits of joining the UF Chemistry community.</span>
         </li>
-
         <li>
-        <span class="role"><b>Mentorship &amp; peer support</b></span><br />
-        <span class="desc">
-            Mentor students and early-career researchers on Python workflows for computational chemistry and HPC, including debugging, environment setup, and best practices for reproducible research.
-        </span>
+          <span class="role"><b>Mentorship &amp; peer support</b></span><br />
+          <span class="desc">Mentor students and early-career researchers on Python workflows for computational chemistry and HPC, including debugging, environment setup, and best practices for reproducible research.</span>
         </li>
-
-        <li>
-        <span class="role"><b>Community demos &amp; knowledge sharing</b></span><br />
-        <span class="desc">
-            Create tutorials and mini-talks on practical scientific computing topics (GPU workflows, profiling, and scaling), aimed at making advanced tooling approachable to new users.
-        </span>
-        </li>
-    </ul>
-
+      </ul>
     </section>
-
   </main>
 
   <footer class="wrap foot">
     <small>© <span id="y"></span> Nick Terrel</small>
   </footer>
 
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    const tabs = [...document.querySelectorAll(".tab")];
+    const panels = [...document.querySelectorAll(".panel")];
+
+    function show(ids, pushHash=true) {
+      const want = new Set(Array.isArray(ids) ? ids : [ids]);
+
+      panels.forEach(p => (p.hidden = !want.has(p.id)));
+
+      tabs.forEach(t => {
+        const tabIds = (t.dataset.tabs ?? t.dataset.tab ?? "")
+          .split(",")
+          .map(s => s.trim())
+          .filter(Boolean);
+
+        const selected = tabIds.length && tabIds.every(id => want.has(id));
+        t.setAttribute("aria-selected", selected ? "true" : "false");
+        t.setAttribute("tabindex", selected ? "0" : "-1");
+      });
+
+      if (pushHash) {
+        // use the first id as the hash
+        const first = [...want][0];
+        history.replaceState(null, "", "#" + first);
+      }
+    }
+
+    tabs.forEach(t =>
+      t.addEventListener("click", () => {
+        const ids = (t.dataset.tabs ?? t.dataset.tab ?? "")
+          .split(",")
+          .map(s => s.trim())
+          .filter(Boolean);
+        show(ids);
+      })
+    );
+
+    // On load: if hash is #contact, treat it as the combined view
+    const initial = (location.hash || "#about").slice(1);
+    if (initial === "about" || initial === "contact") show(["about", "contact"], false);
+    else show(document.getElementById(initial) ? initial : "about", false);
+  </script>
 </body>
 </html>
-
-<script>
-  const tabs = [...document.querySelectorAll(".tab")];
-  const panels = [...document.querySelectorAll(".panel")];
-
-  function show(id, pushHash=true) {
-    panels.forEach(p => p.hidden = (p.id !== id));
-    tabs.forEach(t => {
-      const selected = t.dataset.tab === id;
-      t.setAttribute("aria-selected", selected ? "true" : "false");
-      t.setAttribute("tabindex", selected ? "0" : "-1");
-    });
-    if (pushHash) history.replaceState(null, "", "#" + id);
-  }
-
-  tabs.forEach(t => t.addEventListener("click", () => show(t.dataset.tab)));
-
-  // On load: use URL hash if present, else default
-  const initial = (location.hash || "#about").slice(1);
-  show(document.getElementById(initial) ? initial : "about", false);
-</script>
