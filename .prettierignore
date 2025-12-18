@@ -1,0 +1,7 @@
+# Paths to ignore for Prettier
+
+node_modules/
+dist/
+build/
+out/
+.next/
